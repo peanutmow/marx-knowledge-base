@@ -6,10 +6,7 @@
   <img alt="Ollama" src="https://img.shields.io/badge/ollama-local-orange">
 </p>
 
-A fully-local AI assistant trained on over **125+ primary works** of **Marx, Engels, Lenin, Trotsky, Luxemburg, and Gramsci**. Ask it anything — it retrieves the most relevant passages from original texts and synthesises a grounded, cited answer.
-
-**No cloud. No API keys. Runs entirely on your machine.**
-
+A fully-local AI assistant trained on over **125+ primary works** of **Marx, Engels, and Lenin**. Retrieves the most relevant passages from original texts and synthesises a grounded, cited answer.
 ---
 
 ## How it works
