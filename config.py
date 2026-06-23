@@ -6,7 +6,7 @@ import os
 
 # ── Ollama ────────────────────────────────────────────────────────────────────
 OLLAMA_BASE_URL  = os.getenv("OLLAMA_BASE_URL",  "http://localhost:11434")
-LLM_MODEL        = os.getenv("LLM_MODEL",        "qwen3.5:9b")   # change to qwen3.6:27b, qwen3.5:9b, qwen3:27b, qwen3:8b, llama3.1:8b, mistral:latest, or gemma3:3b for lower-end hardware
+LLM_MODEL        = os.getenv("LLM_MODEL",        "qwen3.5:9b")   # alternatives: qwen3.6:27b, qwen3.5:27b, qwen3:27b, qwen3:8b, llama3.1:8b, llama3.1:70b, qwen2.5:7b, mistral:latest, gemma3:3b
 EMBEDDING_MODEL  = os.getenv("EMBEDDING_MODEL",  "nomic-embed-text")
 
 # ── Paths ─────────────────────────────────────────────────────────────────────

@@ -1,5 +1,11 @@
 # Marxist Knowledge-Base AI
 
+<p>
+  <img alt="Python" src="https://img.shields.io/badge/python-3.10%2B-blue">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
+  <img alt="Ollama" src="https://img.shields.io/badge/ollama-local-orange">
+</p>
+
 A fully-local AI assistant trained on the primary works of **Marx, Engels, Lenin, Trotsky, Luxemburg, and Gramsci**. Ask it anything — it retrieves the most relevant passages from 50+ original texts and synthesises a grounded, cited answer.
 
 **No cloud. No API keys. Runs entirely on your machine.**
@@ -18,7 +24,7 @@ nomic-embed-text (Ollama)          ← turns your question into a vector
 ChromaDB vector search             ← finds the 6 most relevant passages
      │
      ▼
-llama3.1:8b (Ollama)               ← reads passages + your question → writes answer
+qwen3.5:9b (Ollama)                ← reads passages + your question → writes answer
      │
      ▼
 Streamlit web UI                   ← displays answer + source citations
@@ -47,17 +53,15 @@ Then pull the two models you need:
 
 ```powershell
 ollama pull nomic-embed-text    # embedding model (~274 MB)
-ollama pull qwen3.6:27b         # main language model (~17 GB) — needs ~20 GB RAM/VRAM
+ollama pull qwen3.5:9b          # main language model (~5.5 GB)
 ```
 
-> **If you have a local Ollama model named `qwen3.5:9b`, select it in the app instead.**
->
-> **Lower-end machine?** Replace `qwen3.6:27b` with `qwen3.5:9b`, `qwen3.5:27b`, `qwen3:27b`, `qwen3:8b`, `llama3.1:8b`, `mistral:latest`, or `gemma3:3b`. Edit `config.py` → `LLM_MODEL`.
+> **Higher-end machine?** Replace `qwen3.5:9b` with `qwen3.6:27b` (~17 GB), `qwen3:27b`, or `llama3.1:70b` for deeper reasoning. Lower-end: `qwen3:8b`, `llama3.1:8b`, `mistral:latest`, or `gemma3:3b`. Edit `config.py` → `LLM_MODEL`.
 
 ### 2. Clone the repo & install Python dependencies
 
 ```powershell
-git clone https://github.com/yourname/marx-knowledge-base
+git clone https://github.com/peanutmow/marx-knowledge-base
 cd marx-knowledge-base
 
 python -m venv venv
@@ -149,12 +153,12 @@ All settings are in `config.py`:
 
 | Setting | Default | Effect |
 |---------|---------|--------|
-| `LLM_MODEL` | `llama3.1:8b` | LLM used for generation |
+| `LLM_MODEL` | `qwen3.5:9b` | LLM used for generation |
 | `EMBEDDING_MODEL` | `nomic-embed-text` | Embedding model |
 | `TOP_K` | `6` | Passages retrieved per query |
 | `CHUNK_SIZE` | `512` | Tokens per indexed chunk |
 | `LLM_TEMPERATURE` | `0.3` | Lower = more faithful to sources |
-| `LLM_CONTEXT_WIN` | `8192` | Must match your model's actual context |
+| `LLM_CONTEXT_WIN` | `32768` | Must match your model's actual context |
 
 ---
 
@@ -167,6 +171,8 @@ marx-knowledge-base/
 ├── config.py               ← All settings
 ├── corpus_config.json      ← Curated list of works
 ├── requirements.txt
+├── LICENSE                 ← MIT license
+├── .gitignore
 ├── scripts/
 │   ├── download_corpus.py  ← Scrapes MIA → data/raw/
 │   └── ingest.py           ← Embeds texts → chroma_db/
@@ -176,8 +182,13 @@ marx-knowledge-base/
 
 ---
 
-## Legal / ethical notes
+## License
 
-- All texts on [Marxists Internet Archive](https://www.marxists.org) are in the **public domain** or licensed **CC BY-SA**. This project downloads them for personal research use.
+The **source code** in this repository is licensed under the **MIT License** — see [`LICENSE`](LICENSE).
+
+The **corpus texts** downloaded from [Marxists Internet Archive](https://www.marxists.org) are in the **public domain** or licensed **CC BY-SA**. They are downloaded for personal research use only.
+
+## Ethical notes
+
 - The scraper respects a rate limit and identifies itself in its User-Agent string.
 - No data is sent to any third party; everything runs locally.
