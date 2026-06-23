@@ -1,0 +1,380 @@
+[
+  {
+    "id": "marx-capital-v1",
+    "author": "Marx",
+    "title": "Capital, Volume I",
+    "year": 1867,
+    "url": "https://www.marxists.org/archive/marx/works/1867-c1/index.htm"
+  },
+  {
+    "id": "marx-capital-v2",
+    "author": "Marx",
+    "title": "Capital, Volume II",
+    "year": 1885,
+    "url": "https://www.marxists.org/archive/marx/works/1885-c2/index.htm"
+  },
+  {
+    "id": "marx-capital-v3",
+    "author": "Marx",
+    "title": "Capital, Volume III",
+    "year": 1894,
+    "url": "https://www.marxists.org/archive/marx/works/1894-c3/index.htm"
+  },
+  {
+    "id": "marx-communist-manifesto",
+    "author": "Marx",
+    "title": "The Communist Manifesto",
+    "year": 1848,
+    "url": "https://www.marxists.org/archive/marx/works/1848/communist-manifesto/index.htm"
+  },
+  {
+    "id": "marx-german-ideology",
+    "author": "Marx",
+    "title": "The German Ideology",
+    "year": 1846,
+    "url": "https://www.marxists.org/archive/marx/works/1845/german-ideology/index.htm"
+  },
+  {
+    "id": "marx-grundrisse",
+    "author": "Marx",
+    "title": "Grundrisse",
+    "year": 1858,
+    "url": "https://www.marxists.org/archive/marx/works/1857/grundrisse/index.htm"
+  },
+  {
+    "id": "marx-critique-political-economy",
+    "author": "Marx",
+    "title": "A Contribution to the Critique of Political Economy",
+    "year": 1859,
+    "url": "https://www.marxists.org/archive/marx/works/1859/critique-pol-economy/index.htm"
+  },
+  {
+    "id": "marx-18th-brumaire",
+    "author": "Marx",
+    "title": "The Eighteenth Brumaire of Louis Bonaparte",
+    "year": 1852,
+    "url": "https://www.marxists.org/archive/marx/works/1852/18th-brumaire/index.htm"
+  },
+  {
+    "id": "marx-civil-war-france",
+    "author": "Marx",
+    "title": "The Civil War in France",
+    "year": 1871,
+    "url": "https://www.marxists.org/archive/marx/works/1871/civil-war-france/index.htm"
+  },
+  {
+    "id": "marx-critique-gotha-programme",
+    "author": "Marx",
+    "title": "Critique of the Gotha Programme",
+    "year": 1875,
+    "url": "https://www.marxists.org/archive/marx/works/1875/gotha/index.htm"
+  },
+  {
+    "id": "marx-wage-labour-capital",
+    "author": "Marx",
+    "title": "Wage Labour and Capital",
+    "year": 1849,
+    "url": "https://www.marxists.org/archive/marx/works/1847/wage-labour/index.htm"
+  },
+  {
+    "id": "marx-wages-price-profit",
+    "author": "Marx",
+    "title": "Wages, Price and Profit",
+    "year": 1865,
+    "url": "https://www.marxists.org/archive/marx/works/1865/value-price-profit/index.htm"
+  },
+  {
+    "id": "marx-poverty-philosophy",
+    "author": "Marx",
+    "title": "The Poverty of Philosophy",
+    "year": 1847,
+    "url": "https://www.marxists.org/archive/marx/works/1847/poverty-philosophy/index.htm"
+  },
+  {
+    "id": "marx-class-struggles-france",
+    "author": "Marx",
+    "title": "The Class Struggles in France",
+    "year": 1850,
+    "url": "https://www.marxists.org/archive/marx/works/1850/class-struggles-france/index.htm"
+  },
+  {
+    "id": "marx-theses-feuerbach",
+    "author": "Marx",
+    "title": "Theses on Feuerbach",
+    "year": 1845,
+    "url": "https://www.marxists.org/archive/marx/works/1845/theses/index.htm"
+  },
+  {
+    "id": "marx-economic-philosophic-manuscripts",
+    "author": "Marx",
+    "title": "Economic and Philosophic Manuscripts of 1844",
+    "year": 1844,
+    "url": "https://www.marxists.org/archive/marx/works/1844/manuscripts/preface.htm"
+  },
+  {
+    "id": "engels-origin-family",
+    "author": "Engels",
+    "title": "The Origin of the Family, Private Property and the State",
+    "year": 1884,
+    "url": "https://www.marxists.org/archive/marx/works/1884/origin-family/index.htm"
+  },
+  {
+    "id": "engels-anti-duhring",
+    "author": "Engels",
+    "title": "Anti-Dühring",
+    "year": 1878,
+    "url": "https://www.marxists.org/archive/marx/works/1877/anti-duhring/index.htm"
+  },
+  {
+    "id": "engels-socialism-utopian-scientific",
+    "author": "Engels",
+    "title": "Socialism: Utopian and Scientific",
+    "year": 1880,
+    "url": "https://www.marxists.org/archive/marx/works/1880/soc-utop/index.htm"
+  },
+  {
+    "id": "engels-dialectics-nature",
+    "author": "Engels",
+    "title": "Dialectics of Nature",
+    "year": 1883,
+    "url": "https://www.marxists.org/archive/marx/works/1883/don/index.htm"
+  },
+  {
+    "id": "engels-condition-working-class",
+    "author": "Engels",
+    "title": "The Condition of the Working Class in England",
+    "year": 1845,
+    "url": "https://www.marxists.org/archive/marx/works/1845/condition-working-class/index.htm"
+  },
+  {
+    "id": "engels-ludwig-feuerbach",
+    "author": "Engels",
+    "title": "Ludwig Feuerbach and the End of Classical German Philosophy",
+    "year": 1886,
+    "url": "https://www.marxists.org/archive/marx/works/1886/ludwig-feuerbach/index.htm"
+  },
+  {
+    "id": "engels-peasant-war",
+    "author": "Engels",
+    "title": "The Peasant War in Germany",
+    "year": 1850,
+    "url": "https://www.marxists.org/archive/marx/works/1850/peasant-war-germany/index.htm"
+  },
+  {
+    "id": "engels-housing-question",
+    "author": "Engels",
+    "title": "The Housing Question",
+    "year": 1872,
+    "url": "https://www.marxists.org/archive/marx/works/1872/housing-question/index.htm"
+  },
+  {
+    "id": "engels-role-of-labour",
+    "author": "Engels",
+    "title": "The Part Played by Labour in the Transition from Ape to Man",
+    "year": 1876,
+    "url": "https://www.marxists.org/archive/marx/works/1876/part-played-labour/index.htm"
+  },
+  {
+    "id": "lenin-state-revolution",
+    "author": "Lenin",
+    "title": "The State and Revolution",
+    "year": 1917,
+    "url": "https://www.marxists.org/archive/lenin/works/1917/staterev/index.htm"
+  },
+  {
+    "id": "lenin-imperialism",
+    "author": "Lenin",
+    "title": "Imperialism, the Highest Stage of Capitalism",
+    "year": 1917,
+    "url": "https://www.marxists.org/archive/lenin/works/1916/imp-hsc/index.htm"
+  },
+  {
+    "id": "lenin-what-is-to-be-done",
+    "author": "Lenin",
+    "title": "What Is to Be Done?",
+    "year": 1902,
+    "url": "https://www.marxists.org/archive/lenin/works/1901/witbd/index.htm"
+  },
+  {
+    "id": "lenin-development-capitalism",
+    "author": "Lenin",
+    "title": "The Development of Capitalism in Russia",
+    "year": 1899,
+    "url": "https://www.marxists.org/archive/lenin/works/1899/devel/index.htm"
+  },
+  {
+    "id": "lenin-left-wing-communism",
+    "author": "Lenin",
+    "title": "Left-Wing Communism: An Infantile Disorder",
+    "year": 1920,
+    "url": "https://www.marxists.org/archive/lenin/works/1920/lwc/index.htm"
+  },
+  {
+    "id": "lenin-two-tactics",
+    "author": "Lenin",
+    "title": "Two Tactics of Social-Democracy in the Democratic Revolution",
+    "year": 1905,
+    "url": "https://www.marxists.org/archive/lenin/works/1905/tactics/index.htm"
+  },
+  {
+    "id": "lenin-materialism-empirio",
+    "author": "Lenin",
+    "title": "Materialism and Empirio-Criticism",
+    "year": 1909,
+    "url": "https://www.marxists.org/archive/lenin/works/1908/mec/index.htm"
+  },
+  {
+    "id": "lenin-philosophical-notebooks",
+    "author": "Lenin",
+    "title": "Philosophical Notebooks",
+    "year": 1916,
+    "url": "https://www.marxists.org/archive/lenin/works/1914/philo-note/index.htm"
+  },
+  {
+    "id": "lenin-national-question",
+    "author": "Lenin",
+    "title": "The Right of Nations to Self-Determination",
+    "year": 1914,
+    "url": "https://www.marxists.org/archive/lenin/works/1914/self-det/index.htm"
+  },
+  {
+    "id": "lenin-april-theses",
+    "author": "Lenin",
+    "title": "April Theses",
+    "year": 1917,
+    "url": "https://www.marxists.org/archive/lenin/works/1917/apr/04.htm"
+  },
+  {
+    "id": "trotsky-history-russian-revolution",
+    "author": "Trotsky",
+    "title": "The History of the Russian Revolution",
+    "year": 1930,
+    "url": "https://www.marxists.org/archive/trotsky/1930/hrr/index.htm"
+  },
+  {
+    "id": "trotsky-revolution-betrayed",
+    "author": "Trotsky",
+    "title": "The Revolution Betrayed",
+    "year": 1936,
+    "url": "https://www.marxists.org/archive/trotsky/1936/revbet/index.htm"
+  },
+  {
+    "id": "trotsky-permanent-revolution",
+    "author": "Trotsky",
+    "title": "The Permanent Revolution",
+    "year": 1929,
+    "url": "https://www.marxists.org/archive/trotsky/1931/tpr/index.htm"
+  },
+  {
+    "id": "trotsky-terrorism-communism",
+    "author": "Trotsky",
+    "title": "Terrorism and Communism",
+    "year": 1920,
+    "url": "https://www.marxists.org/archive/trotsky/1920/terrcomm/index.htm"
+  },
+  {
+    "id": "trotsky-my-life",
+    "author": "Trotsky",
+    "title": "My Life",
+    "year": 1930,
+    "url": "https://www.marxists.org/archive/trotsky/1930/mylife/index.htm"
+  },
+  {
+    "id": "trotsky-transitional-program",
+    "author": "Trotsky",
+    "title": "The Transitional Program",
+    "year": 1938,
+    "url": "https://www.marxists.org/archive/trotsky/1938/tp/index.htm"
+  },
+  {
+    "id": "trotsky-their-morals-ours",
+    "author": "Trotsky",
+    "title": "Their Morals and Ours",
+    "year": 1938,
+    "url": "https://www.marxists.org/archive/trotsky/1938/morals/morals.htm"
+  },
+  {
+    "id": "luxemburg-reform-revolution",
+    "author": "Luxemburg",
+    "title": "Reform or Revolution",
+    "year": 1900,
+    "url": "https://www.marxists.org/archive/luxemburg/1900/reform-revolution/index.htm"
+  },
+  {
+    "id": "luxemburg-accumulation-capital",
+    "author": "Luxemburg",
+    "title": "The Accumulation of Capital",
+    "year": 1913,
+    "url": "https://www.marxists.org/archive/luxemburg/1913/accumulation-capital/index.htm"
+  },
+  {
+    "id": "luxemburg-russian-revolution",
+    "author": "Luxemburg",
+    "title": "The Russian Revolution",
+    "year": 1918,
+    "url": "https://www.marxists.org/archive/luxemburg/1918/russian-revolution/index.htm"
+  },
+  {
+    "id": "luxemburg-junius-pamphlet",
+    "author": "Luxemburg",
+    "title": "The Junius Pamphlet",
+    "year": 1915,
+    "url": "https://www.marxists.org/archive/luxemburg/1915/junius/index.htm"
+  },
+  {
+    "id": "luxemburg-mass-strike",
+    "author": "Luxemburg",
+    "title": "The Mass Strike",
+    "year": 1906,
+    "url": "https://www.marxists.org/archive/luxemburg/1906/mass-strike/index.htm"
+  },
+  {
+    "id": "luxemburg-national-question",
+    "author": "Luxemburg",
+    "title": "The National Question",
+    "year": 1909,
+    "url": "https://www.marxists.org/archive/luxemburg/1909/national-question/index.htm"
+  },
+  {
+    "id": "gramsci-prison-notebooks",
+    "author": "Gramsci",
+    "title": "Prison Notebooks (Selections)",
+    "year": 1935,
+    "url": "https://www.marxists.org/archive/gramsci/prison_notebooks/index.htm"
+  },
+  {
+    "id": "gramsci-modern-prince",
+    "author": "Gramsci",
+    "title": "The Modern Prince",
+    "year": 1933,
+    "url": "https://www.marxists.org/archive/gramsci/prison_notebooks/modern_prince/index.htm"
+  },
+  {
+    "id": "gramsci-americanism-fordism",
+    "author": "Gramsci",
+    "title": "Americanism and Fordism",
+    "year": 1934,
+    "url": "https://www.marxists.org/archive/gramsci/prison_notebooks/americanism/index.htm"
+  },
+  {
+    "id": "gramsci-political-writings",
+    "author": "Gramsci",
+    "title": "Political Writings 1910-1920",
+    "year": 1910,
+    "url": "https://www.marxists.org/archive/gramsci/works/1919/09/index.htm"
+  },
+  {
+    "id": "gramsci-sardinian-question",
+    "author": "Gramsci",
+    "title": "Some Aspects of the Southern Question",
+    "year": 1926,
+    "url": "https://www.marxists.org/archive/gramsci/works/1926/10/southern.htm"
+  },
+  {
+    "id": "gramsci-soviets-in-italy",
+    "author": "Gramsci",
+    "title": "Soviets in Italy",
+    "year": 1919,
+    "url": "https://www.marxists.org/archive/gramsci/works/1919/07/soviets.htm"
+  }
+]

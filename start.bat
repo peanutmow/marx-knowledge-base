@@ -1,0 +1,100 @@
+@echo off
+setlocal enabledelayedexpansion
+title Marxist Knowledge Base
+cd /d "%~dp0"
+
+echo ============================================
+echo    Marxist Knowledge Base
+echo ============================================
+echo.
+
+set PYTHON="%~dp0venv\Scripts\python.exe"
+set PIP="%~dp0venv\Scripts\pip.exe"
+set LLM_MODEL=qwen3.5:9b
+
+REM ?? Step 1: Virtual environment ??????????????????????????????????????????
+if exist "%~dp0venv\Scripts\python.exe" goto venv_ok
+echo [1/5] Creating virtual environment...
+python -m venv "%~dp0venv"
+if errorlevel 1 (
+    echo ERROR: Could not create venv. Is Python 3.10+ installed?
+    pause
+    exit /b 1
+)
+echo [1/5] Installing dependencies...
+%PYTHON% -m pip install --upgrade pip --quiet
+%PIP% install -r "%~dp0requirements.txt"
+if errorlevel 1 (
+    echo ERROR: pip install failed. See errors above.
+    pause
+    exit /b 1
+)
+:venv_ok
+echo [1/5] Virtual environment OK.
+
+REM ?? Step 2: Ollama ???????????????????????????????????????????????????????
+tasklist /fi "imagename eq ollama.exe" 2>NUL | find /i "ollama.exe" >NUL
+if not errorlevel 1 goto ollama_ready
+echo [2/5] Starting Ollama server...
+start "Ollama Server" /min cmd /c ollama serve
+:ollama_wait
+powershell -NoProfile -Command "try{Invoke-WebRequest http://127.0.0.1:11434 -TimeoutSec 1 -UseBasicParsing -EA Stop|Out-Null;exit 0}catch{exit 1}" >NUL 2>&1
+if errorlevel 1 ( timeout /t 2 /nobreak >NUL & goto ollama_wait )
+:ollama_ready
+echo [2/5] Ollama ready.
+
+REM ?? Step 3: Models ???????????????????????????????????????????????????????
+echo [3/5] Checking Ollama models...
+ollama show nomic-embed-text >NUL 2>&1
+if errorlevel 1 ( echo      Pulling nomic-embed-text ~274MB... & ollama pull nomic-embed-text )
+ollama show %LLM_MODEL% >NUL 2>&1
+if errorlevel 1 ( echo      Pulling %LLM_MODEL% ~17GB... & ollama pull %LLM_MODEL% )
+echo [3/5] Models ready.
+
+REM ?? Step 4: Corpus ???????????????????????????????????????????????????????
+if not exist "%~dp0data\raw" mkdir "%~dp0data\raw"
+dir /b /s "%~dp0data\raw\*.txt" >NUL 2>&1
+if not errorlevel 1 goto corpus_done
+echo.
+echo [4/5] Corpus not downloaded yet.
+echo      ~60 works from marxists.org, takes 10-20 minutes.
+echo.
+choice /C YN /M "Download corpus now?"
+if errorlevel 2 goto corpus_skip
+echo      Downloading...
+%PYTHON% "%~dp0scripts\download_corpus.py"
+echo      Done.
+goto corpus_done
+:corpus_skip
+echo      Skipped. App will warn if knowledge base is empty.
+:corpus_done
+echo [4/5] Corpus step done.
+
+REM ?? Step 5: Ingest ???????????????????????????????????????????????????????
+if exist "%~dp0chroma_db" goto ingest_done
+dir /b /s "%~dp0data\raw\*.txt" >NUL 2>&1
+if errorlevel 1 goto ingest_skip
+echo.
+echo [5/5] Building vector database (first run: 20-90 min)...
+%PYTHON% "%~dp0scripts\ingest.py"
+echo [5/5] Vector database built.
+goto ingest_done
+:ingest_skip
+echo [5/5] No corpus to ingest yet.
+:ingest_done
+echo [5/5] Ingest step done.
+
+REM ?? Launch ???????????????????????????????????????????????????????????????
+echo.
+echo ============================================
+echo    Launching app at http://127.0.0.1:8501
+echo    Browser will open automatically.
+echo    Press Ctrl+C here to stop the server.
+echo ============================================
+echo.
+
+%PYTHON% -m streamlit run "%~dp0app.py"
+
+echo.
+echo Server stopped. Press any key to close.
+pause >NUL
