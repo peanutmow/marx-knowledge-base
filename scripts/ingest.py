@@ -16,6 +16,12 @@ import sys
 import time
 from pathlib import Path
 
+# Force UTF-8 encoding for stdout/stderr (handles Unicode on Windows)
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
 import chromadb
 
 # ── allow running from project root ─────────────────────────────────────────

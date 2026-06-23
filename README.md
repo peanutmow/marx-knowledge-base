@@ -6,7 +6,7 @@
   <img alt="Ollama" src="https://img.shields.io/badge/ollama-local-orange">
 </p>
 
-A fully-local AI assistant trained on the primary works of **Marx, Engels, Lenin, Trotsky, Luxemburg, and Gramsci**. Ask it anything — it retrieves the most relevant passages from 50+ original texts and synthesises a grounded, cited answer.
+A fully-local AI assistant trained on over **125+ primary works** of **Marx, Engels, Lenin, Trotsky, Luxemburg, and Gramsci**. Ask it anything — it retrieves the most relevant passages from original texts and synthesises a grounded, cited answer.
 
 **No cloud. No API keys. Runs entirely on your machine.**
 
@@ -71,19 +71,55 @@ venv\Scripts\activate           # Windows
 pip install -r requirements.txt
 ```
 
-### 3. Download the corpus (~60 works from Marxists Internet Archive)
+### 3. Download the corpus (~125 works from Marxists Internet Archive)
+
+The downloader offers **two modes**: interactive and CLI.
+
+#### Interactive mode (recommended)
 
 ```powershell
 python scripts/download_corpus.py
 ```
 
-This takes **5–20 minutes** depending on your connection. It politely rate-limits requests to MIA (0.6 s between pages). All texts are saved to `data/raw/`.
+This presents a menu where you can choose from **pre-built optional packages**:
 
-You can download a single author first to test:
+| Package | Works | Description |
+|---------|-------|-------------|
+| `marx-essential` | 16 | Marx's major works (Capital, Manifesto, Grundrisse, etc.) |
+| `marx-comprehensive` | 53 | All Marx works including early writings, articles, political texts |
+| `engels-essential` | 7 | Engels' major works (Anti-Dühring, Condition of Working Class, etc.) |
+| `engels-comprehensive` | 32 | All Engels works including political writings, articles |
+| `lenin-essential` | 9 | Lenin's major works (State & Revolution, Imperialism, etc.) |
+| `lenin-comprehensive` | 40 | All Lenin works including congress speeches, articles |
+| `all-essential` | 32 | All authors' priority-1 works |
+| `all-marx-engels` | 85 | Everything by Marx and Engels |
+| `all-comprehensive` | 125 | The complete corpus |
+
+You can also create a **custom selection** by picking authors, categories, and priority levels.
+
+#### CLI mode
 
 ```powershell
+# Download a pre-defined package
+python scripts/download_corpus.py --package marx-essential
+
+# Download everything (non-interactive)
+python scripts/download_corpus.py --noninteractive
+
+# Single author
 python scripts/download_corpus.py --author Marx
+
+# Single work
+python scripts/download_corpus.py --id marx-capital-v1
+
+# List available works
+python scripts/download_corpus.py --list
+
+# List available packages
+python scripts/download_corpus.py --list-packages
 ```
+
+The download takes **5–20 minutes** depending on your connection. It politely rate-limits requests to MIA (0.6 s between pages). All texts are saved to `data/raw/`.
 
 ### 4. Embed and index the corpus
 
